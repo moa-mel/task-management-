@@ -17,10 +17,6 @@ app.use('/api', taskRoute)
 app.get('/', (req, res)=>{
     res.send('Hello node')
 })
-//Use a Custom Templating Engine
-app.set("view engine", "ejs");
-//Change views default directory 
-app.set("views", path.resolve("./src/view"));
 
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
